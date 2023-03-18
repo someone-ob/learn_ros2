@@ -1,0 +1,20 @@
+<launch>
+    <!-- <node
+        pkg = "turtlesim"
+        exec = "turtlesim_node"
+        name = "t1"
+        namespace = "ns_1"
+        exec_name = "my_label_xxx"
+        respawn = "True"
+    /> -->
+    <!-- <node pkg = "turtlesim" exec = "turtlesim_node" name = "t1">
+        方式一：单个设置参数
+        <param name = "background_r" value ="100"/>
+        <param name = "background_g" value ="50"/>
+        <param name = "background_b" value ="90"/>
+        方式二：通过读取yaml文件
+        <param from="$(find-pkg-share cpp01_launch)/config/xixi.yaml"/>
+    </node> -->
+    <node pkg = "turtlesim" exec = "turtlesim_node" name = "t1" ros_args ="--remap __ns:=/xxx/yyy"/>
+    <node pkg = "turtlesim" exec = "turtlesim_node" name = "t1" args ="--ros-args --remap __ns:=/xxx/yyy"/>
+</launch>

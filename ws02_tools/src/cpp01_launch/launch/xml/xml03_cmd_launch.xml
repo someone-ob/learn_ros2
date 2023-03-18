@@ -1,0 +1,3 @@
+<launch>
+    <excutable cmd="ros2 topic echo /turtle1/pose" output = "both"/>
+</launch>

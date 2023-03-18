@@ -1,0 +1,4 @@
+launch:
+- executable:
+      cmd: "ros2 topic echo /turtle1/pose" 
+      output: "both"

@@ -1,0 +1,27 @@
+1.创建工作空间并初始化
+mkdir -p 自定义空间名称/src
+cd 自定义空间名称
+colcon build
+
+2.进入 src 创建 ros 功能包
+使用指令ros2 pkg create pkg001_helloworld_cpp --build-type ament_cmake --dependencies rclcpp --node-name helloworld
+说明：
+①ros2 pkg create即指令名称
+②pkg001_helloworld_cpp即包名
+③--build-type ament_cmake即构建类型
+④--dependencies rclcpp导入依赖
+⑤--node-name helloworld设置一个可执行程序，文件名为hello world
+
+3.写源码，修改配置文件
+
+4.编译
+进入工作空间目录并输入命令行colcon build
+
+5.执行
+. install/setup.bash
+/*
+运行优化
+echo "source /home/jzh/桌面/learn_ros2/ws00_helloworld/install/setup.bash" >> ~/.bashrc
+("/home/jzh/桌面/learn_ros2/ws00_helloworld/install"即绝对路径)
+*/
+ros2 run pkg001_helloworld_cpp helloworld（pkg001_helloworld_cpp即包名 ，helloworld即可执行程序名）

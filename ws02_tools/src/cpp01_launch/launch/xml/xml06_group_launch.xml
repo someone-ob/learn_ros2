@@ -1,0 +1,11 @@
+<launch>
+    <group>
+        <push-ros-namespace namesapce="g1"/>
+        <node pkg="turtlesim" exec="turtlesim_node" name="t1"/>
+        <node pkg="turtlesim" exec="turtlesim_node" name="t2"/>
+    </group>
+    <group>
+        <push-ros-namespace namesapce="g2"/>
+        <node pkg="turtlesim" exec="turtlesim_node" name="t3"/>
+    </group>
+</launch>
